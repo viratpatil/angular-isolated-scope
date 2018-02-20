@@ -1,0 +1,30 @@
+<div>
+    <h3>Isolated Scope Directive</h3>
+    pre>
+     - If you want to create reusable directive we should not rely on parent scope.
+     - Hence we need to have isolate scope
+     - On creating isolated scope directive is deattached from the parent scope
+     
+     - in order to pass the data for databinding we need to use @, =, and & characters.
+     
+     - Directives that use isolate scope provide 3 different options to interact with the outside world
+     The 3 options are referred to as Local Scope Properties and can be defined using the @, =, and & characters
+     
+     - The <b> @ local scope property </b> is used to access string values that are defined outside the directive
+     see below.
+     - @ does not help to achieve binding from child to scope. 
+     i.e if value is changed inside directive the outerscope value remains unchanged.
+     In order to achieve this we have to use <b>= local scope property</b>
+     - & Local Scope Property  is used to bind to external functions
+     - Also check how to pass parameter to external function
+     
+    </pre>
+    
+    <h3>1. First Name  "{{first}}" is passed using @ </h3>
+    <h3>1. Last Name  "{{last}}" is passed using = </h3>
+    
+    <button ng-click="first = 'Ankit' ">Change FirstName</button>
+    <button ng-click="last = 'Mody' ">Change LastName</button>
+    <button ng-click="action()('Ronak', 'Hemant')">Trigger Controller Function</button>
+    
+</div>
